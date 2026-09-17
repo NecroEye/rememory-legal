@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReMemory AI - Privacy Policy</title>
+    <style>
+        /* Palette: the app's Ink look. Rice paper, ink, vermilion. Follows the reader's light or dark setting. */
+        :root {
+            --bg: #F6F2EA;
+            --surface: #EFE8DA;
+            --border: #E2D9C7;
+            --accent: #C43D2B;
+            --accent-soft: #C0553C;
+            --text: #1C1B19;
+            --text-secondary: #4F4A44;
+            --text-muted: #857E74;
+            --safe: #3E4B6B;
+            --safe-tint: rgba(62, 75, 107, 0.10);
+            --warn-tint: rgba(196, 61, 43, 0.07);
+            --warn-border: rgba(196, 61, 43, 0.25);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #141413;
+                --surface: #1F1E1C;
+                --border: #2E2C29;
+                --accent: #E8604F;
+                --accent-soft: #E8604F;
+                --text: #E8E4DC;
+                --text-secondary: #B8B2A8;
+                --text-muted: #7D776E;
+                --safe: #A9B6D8;
+                --safe-tint: rgba(169, 182, 216, 0.12);
+                --warn-tint: rgba(232, 96, 79, 0.08);
+                --warn-border: rgba(232, 96, 79, 0.28);
+            }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--text-secondary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        .container { max-width: 680px; margin: 0 auto; padding: 60px 24px 80px; }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #FFFFFF;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .local-badge {
+            display: inline-block;
+            background-color: var(--safe-tint);
+            color: var(--safe);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+        }
+        h1 { color: var(--text); font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .updated { color: var(--text-muted); font-size: 13px; margin-bottom: 48px; }
+        h2 {
+            color: var(--text);
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        p { margin-bottom: 16px; }
+        .highlight { color: var(--text); font-weight: 600; }
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        .card-title {
+            color: var(--safe);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        .card-negative { background-color: var(--warn-tint); border: 1px solid var(--warn-border); }
+        .card-negative .card-title { color: var(--accent); }
+        ul { list-style: none; padding: 0; }
+        ul li { position: relative; padding-left: 20px; margin-bottom: 8px; }
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-soft);
+        }
+        .card-negative ul li::before { background-color: var(--accent); }
+        .table-wrap { overflow-x: auto; margin: 16px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        th { color: var(--text-muted); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        td { color: var(--text-secondary); }
+        td:first-child { color: var(--text); font-weight: 500; }
+        a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover { color: var(--text); }
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+        .footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        .footer .logo { font-weight: 700; color: var(--text); font-size: 15px; margin-bottom: 4px; }
+        @media (max-width: 600px) {
+            .container { padding: 40px 18px 60px; }
+            h1 { font-size: 26px; }
+            h2 { font-size: 16px; }
+            table { font-size: 13px; }
+            th, td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">Privacy</span>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: September 2026</p>
+
+        <h2>1. Overview</h2>
+        <span class="local-badge">No account, local-first</span>
+        <p><span class="highlight">ReMemory AI keeps your study material on your phone.</span> There is no sign-up and no account. The questions you photograph, the notes, drawings and voice recordings you add, your review history and your statistics are stored only on your device. We do not run servers that receive them, and we have no way to reach them.</p>
+        <p>There is one exception, and Section 5 explains it in full: the optional <span class="highlight">AI features</span> send question text, and on request a question photo, to Google's Gemini service so it can suggest a subject or explain the question.</p>
+
+        <h2>2. Information We Collect</h2>
+        <p>We collect a small amount of data, none of which contains your questions or notes:</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Data</th><th>Purpose</th><th>Identifier</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Crash reports</td><td>Finding and fixing bugs</td><td>Anonymous installation ID</td></tr>
+                    <tr><td>Usage events</td><td>Understanding which features are used</td><td>Advertising ID (resettable)</td></tr>
+                    <tr><td>Device model and Android version</td><td>Compatibility</td><td>Anonymous</td></tr>
+                    <tr><td>App integrity check</td><td>Protecting the AI features from abuse</td><td>Anonymous installation ID</td></tr>
+                    <tr><td>App settings download</td><td>Turning features on or off remotely</td><td>Anonymous installation ID</td></tr>
+                    <tr><td>AI requests (only when used)</td><td>Subject suggestions and explanations</td><td>Not linked to you (Section 5)</td></tr>
+                    <tr><td>Purchase records</td><td>Activating ReMemory Pro</td><td>Anonymous app user ID and Google Play order ID</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>If you tap <span class="highlight">Support</span> in Settings, ReMemory opens your own email app with the app version, your device model and your Android version already written into the message. Nothing is sent until you press send, and you can edit or delete any of it first.</p>
+
+        <h2>3. Information We Do NOT Collect</h2>
+        <div class="card card-negative">
+            <div class="card-title">Never collected by us</div>
+            <ul>
+                <li>Your question photos, cropped pages or recognised text, except as described for AI in Section 5</li>
+                <li>Your own solutions, drawings, voice notes or video links</li>
+                <li>Your review history, statistics, exam date or goal</li>
+                <li>Your name, email address or phone number; there is no account to put them in</li>
+                <li>Your contacts, messages, call history or other photos</li>
+                <li>Your precise or approximate location</li>
+                <li>Browsing history or activity in other apps</li>
+            </ul>
+        </div>
+
+        <h2>4. On-Device Processing</h2>
+        <div class="card">
+            <div class="card-title">Runs on your phone</div>
+            <ul>
+                <li><span class="highlight">Text recognition</span> reads the words in your question photos using Google ML Kit, with the model built into the app. It works without a connection and sends nothing.</li>
+                <li><span class="highlight">Camera</span> is used only while you photograph a question. Photos are saved inside the app, not to your gallery.</li>
+                <li><span class="highlight">Microphone</span> is used only while you record a voice note for your own solution. The recording is saved inside the app.</li>
+                <li><span class="highlight">Reminders</span> are scheduled on the device. No server sends them.</li>
+                <li><span class="highlight">Read aloud</span> uses your device's text-to-speech engine. Some voices offered by that engine need a connection, and those are processed by the engine's provider under its own terms; the app marks them.</li>
+            </ul>
+        </div>
+
+        <h2>5. AI Features (Google Gemini)</h2>
+        <p>When AI features are available in your region and version of the app, ReMemory uses <span class="highlight">Google's Gemini API through Firebase AI Logic</span>. Two different things can be sent, and they are sent at different times.</p>
+        <div class="card">
+            <div class="card-title">Sent automatically</div>
+            <ul>
+                <li>After you save a question, if its text was recognised clearly and your phone is online, the <span class="highlight">recognised text</span> is sent once to suggest a subject, a topic and a few tags.</li>
+                <li>The photo itself is <span class="highlight">not</span> sent for this. If the text could not be read reliably, nothing is sent.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-title">Sent only when you ask</div>
+            <ul>
+                <li>When you tap <span class="highlight">Explain</span> or ask for <span class="highlight">practice questions</span>, the question photo and its recognised text are sent so the model can see the question.</li>
+            </ul>
+        </div>
+        <p>These requests carry no account, name or email. The answers are saved on your device next to the question, labelled as AI content, and the app asks you to check them against your own photo.</p>
+        <p>Google processes these requests as a data processor under the <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API Additional Terms of Service</a>. Under those terms, for our paid use of the API, Google does not use your prompts, images or the responses to improve its products, and keeps them only for a limited period to detect abuse and meet legal obligations.</p>
+        <p>Avoid photographing anything you would not want processed by an online service, such as a page carrying your full name, student number or other personal details. You can crop a page before saving it.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>ReMemory uses the following services, each with its own privacy policy:</p>
+        <div class="card">
+            <div class="card-title">Service providers</div>
+            <ul>
+                <li><span class="highlight">Firebase Crashlytics</span> &mdash; crash reports</li>
+                <li><span class="highlight">Google Analytics for Firebase</span> &mdash; usage statistics</li>
+                <li><span class="highlight">Firebase Remote Config</span> &mdash; delivers feature settings to the app</li>
+                <li><span class="highlight">Firebase App Check</span> with Play Integrity &mdash; confirms requests come from a genuine copy of the app</li>
+                <li><span class="highlight">Firebase AI Logic and the Gemini API</span> &mdash; AI features (Section 5)</li>
+                <li><span class="highlight">Google ML Kit</span> &mdash; on-device text recognition; sends nothing</li>
+                <li><span class="highlight">Google Play Billing</span> &mdash; payment processing</li>
+                <li><span class="highlight">RevenueCat</span> &mdash; subscription management and receipt validation</li>
+                <li><span class="highlight">Google Play in-app updates and in-app review</span> &mdash; update prompts and the rating dialog</li>
+            </ul>
+        </div>
+        <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a> and the <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</p>
+
+        <h2>7. No Advertising</h2>
+        <p>ReMemory shows <span class="highlight">no ads</span> and contains no advertising network. The Advertising ID mentioned in Section 2 is read only by Google Analytics for Firebase to count usage. It is a resettable identifier; you can reset it or delete it in your device settings under Google &gt; Ads.</p>
+
+        <h2>8. Purchases &amp; Subscriptions</h2>
+        <p>ReMemory offers an optional subscription, <span class="highlight">ReMemory Pro</span>. All payments are processed by <span class="highlight">Google Play Billing</span>; we never see or store your payment card details.</p>
+        <p>To activate and restore your subscription, purchase receipts are validated by <span class="highlight">RevenueCat</span> (RevenueCat, Inc.), which receives an anonymous app-generated identifier and Google Play purchase tokens. No name, email or payment details are shared with RevenueCat.</p>
+        <p>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. You can cancel at any time in Google Play &gt; Subscriptions. Refunds are handled under Google Play's refund policy.</p>
+
+        <h2>9. Sharing, Exporting &amp; Backups</h2>
+        <span class="local-badge">Only when you choose</span>
+        <p>ReMemory never uploads your collection. You can move copies out of the app yourself:</p>
+        <ul>
+            <li><span class="highlight">Backup and export</span> writes a ZIP backup, a CSV or JSON file, or a printable PDF to a location you pick in the system file picker. If you pick a cloud folder there, that provider's terms apply to the file.</li>
+            <li><span class="highlight">Share a deck</span> creates a file with the questions, photos and your solutions in that deck, and hands it to the app you choose in the share sheet. Anyone you send it to can read it.</li>
+        </ul>
+
+        <h2>10. Storage, Retention &amp; Deletion</h2>
+        <p>Your questions, photos, notes and history are stored <span class="highlight">locally on your device</span>, inside the app's private storage. Data we receive from the services in Section 6 is sent over encrypted connections.</p>
+        <ul>
+            <li><span class="highlight">Delete all data</span> in Settings removes every question, photo and review record from the device.</li>
+            <li>Uninstalling the app removes all of its local data. Files you exported or shared stay where you put them.</li>
+            <li>Crash reports and analytics are kept by Google for the retention periods set in Firebase, after which they are deleted.</li>
+        </ul>
+
+        <h2>11. Your Choices</h2>
+        <ul>
+            <li><span class="highlight">Camera, microphone and notifications:</span> each is requested only when first needed, and you can revoke it in Android settings</li>
+            <li><span class="highlight">Advertising ID:</span> reset or delete it in device settings under Google &gt; Ads</li>
+            <li><span class="highlight">AI:</span> photos are only sent when you tap Explain or ask for practice questions; subject suggestions use recognised text only</li>
+            <li><span class="highlight">Your collection:</span> export it, or delete it from Settings, at any time</li>
+        </ul>
+
+        <h2>12. Children's Privacy</h2>
+        <p>ReMemory is a study app for exam students and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you are under the age of majority where you live, use the app with the involvement of a parent or guardian. If you believe a child has provided personal data, contact us and we will help remove it.</p>
+
+        <h2>13. International Data Transfers</h2>
+        <p>Crash, analytics and AI requests may be processed on servers outside your country of residence, operated by Google and RevenueCat. These transfers are carried out under those providers' safeguards and applicable data protection law.</p>
+
+        <h2>14. Your Rights</h2>
+        <p>Depending on where you live, including under the GDPR and Turkey's KVKK, you may have the right to:</p>
+        <ul>
+            <li>Access the data held about you</li>
+            <li>Have it corrected or deleted</li>
+            <li>Object to or restrict its processing</li>
+            <li>Lodge a complaint with a data protection authority</li>
+        </ul>
+        <p>Because your study material never leaves your device except as described above, you can exercise most of these rights directly in the app. For anything else, contact us.</p>
+
+        <h2>15. Changes to This Policy</h2>
+        <p>We may update this policy. Changes are announced through app updates, and the date at the top of this page changes with each revision.</p>
+
+        <h2>16. Contact Us</h2>
+        <p>For privacy questions or requests, write to:</p>
+        <p><a href="mailto:gozummuratcan@gmail.com">gozummuratcan@gmail.com</a></p>
+
+        <div class="footer">
+            <div class="logo">ReMemory AI</div>
+            <p>&copy; 2026 Muratcan Gozum. All rights reserved.</p>
+            <p><a href="terms.html">Terms of Service</a></p>
+        </div>
+    </div>
+</body>
+</html>
