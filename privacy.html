@@ -146,7 +146,7 @@
 
         <h2>1. Overview</h2>
         <span class="local-badge">No account, local-first</span>
-        <p><span class="highlight">ReMemory AI keeps your study material on your phone.</span> There is no sign-up and no account. The questions you photograph, the notes, drawings and voice recordings you add, your review history and your statistics are stored only on your device, unless you turn on the optional Google Drive backup, which keeps a copy in your own Google Drive (Section 9). We do not run servers that receive them, and we have no way to reach them.</p>
+        <p><span class="highlight">ReMemory AI keeps your study material on your phone.</span> There is no sign-up and no account. The questions you photograph, the notes, drawings and voice recordings you add, your review history and your statistics are stored only on your device, unless you turn on the optional Google Drive backup, which keeps a copy in your own Google Drive, or share a question or deck with a link, which uploads only that question or deck to our server for 30 days (Section 9). Our server receives nothing else, and we have no way to reach your collection.</p>
         <p>There is one exception, and Section 5 explains it in full: the optional <span class="highlight">AI features</span> send question text, and on request a question photo, to Google's Gemini service so it can suggest a subject or explain the question.</p>
 
         <h2>2. Information We Collect</h2>
@@ -178,7 +178,7 @@
                 <li>Your question photos, cropped pages or recognised text, except as described for AI in Section 5</li>
                 <li>Your own solutions, drawings, voice notes or video links</li>
                 <li>Your review history, statistics, exam date or goal</li>
-                <li>Your name, email address or phone number; there is no account. A name or nickname you type on your Profile stays on your phone and in your own backups</li>
+                <li>Your name, email address or phone number; there is no account. A name or nickname you type on your Profile stays on your phone and in your own backups. A name you type when you share a link goes with that link (Section 9)</li>
                 <li>Your contacts, messages, call history or other photos</li>
                 <li>Your precise or approximate location</li>
                 <li>Browsing history or activity in other apps</li>
@@ -235,6 +235,8 @@
                 <li><span class="highlight">RevenueCat</span> &mdash; subscription management and receipt validation</li>
                 <li><span class="highlight">Meta (Facebook) SDK</span> &mdash; app install and app-open events, used only to measure our own ads (Section 7); no Advertising ID</li>
                 <li><span class="highlight">Google Play in-app updates and in-app review</span> &mdash; update prompts and the rating dialog</li>
+                <li><span class="highlight">Cloudflare</span> &mdash; stores a question or deck you share with a link, for 30 days (Section 9)</li>
+                <li><span class="highlight">Firebase Hosting</span> &mdash; serves the Feed's question packs and the page a shared link opens; nothing about you is sent</li>
             </ul>
         </div>
         <p>See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>, the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy information</a>, the <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a> and the <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a>.</p>
@@ -253,11 +255,12 @@
 
         <h2>9. Sharing, Exporting &amp; Backups</h2>
         <span class="local-badge">Only when you choose</span>
-        <p>ReMemory never uploads your collection to us. You can move copies out of the app yourself:</p>
+        <p>ReMemory never uploads your collection to us. Only a question or deck you share with a link leaves your phone for our server; everything else you move out of the app yourself:</p>
         <ul>
             <li><span class="highlight">Backup and export</span> saves a ZIP backup, a CSV or JSON file, or a printable PDF to the <span class="highlight">Documents/ReMemory</span> folder on your phone (on Android 9 and older, to a location you pick). Other apps allowed to read your Documents folder can open these files, and if you move or share one, the terms of wherever you put it apply.</li>
-            <li><span class="highlight">Share a question</span> makes an image of one question (its photo or text and its subject; your solution is not included) and hands it to the app you choose in the share sheet.</li>
-            <li><span class="highlight">Share a deck</span> creates a file with the questions, photos and your solutions in that deck, and hands it to the app you choose in the share sheet. Anyone you send it to can read it.</li>
+            <li><span class="highlight">Challenge a friend with a link</span> (Share a question): the question you pick &mdash; its photo or text, the correct option, its subject and topic &mdash; your solution if you choose to include it (photo, text, voice recording or video link) and the name you type are uploaded to our server at <span class="highlight">Cloudflare</span>. Anyone with the link can open it for <span class="highlight">30 days</span>; then it is deleted automatically. Your notes, tags, review history and other questions are not sent. <span class="highlight">Share as image only</span> uploads nothing: the app makes an image of the question (its photo or text and its subject) and hands it to the app you choose in the share sheet.</li>
+            <li><span class="highlight">Share a deck</span> with a link uploads the deck's name and colour and its questions the same way, for 30 days. If you choose a file instead, or the link cannot be made, the app creates a file with the questions, photos and your solutions in that deck and hands it to the app you choose; nothing is uploaded, and anyone you send it to can read it.</li>
+            <li>If someone <span class="highlight">reports</span> a shared link, we keep the reason and an irreversible hash derived from the reporter's IP address for 30 days; a link reported by several people is removed.</li>
             <li><span class="highlight">Automatic Google Drive backup</span> (ReMemory Pro, off until you turn it on in Backup &amp; export): once a day on Wi-Fi, the app uploads a full backup &mdash; questions, photos, notes, decks, review history, and the name and avatar on your Profile &mdash; to a hidden app folder in <span class="highlight">your own Google Drive</span>, and can restore it on another phone. The backup includes your solutions, drawings and voice notes as well. The file goes straight from your phone to Google; we never receive it and cannot see it. The app asks Google only for access to that folder (the <code>drive.appdata</code> permission), not to your other Drive files. It keeps the Google account's address on your phone to show where backups go; it is not sent to us. Turning it off stops the backups. You can delete the folder in Google Drive's settings under Manage apps, and revoke access in your Google Account.</li>
         </ul>
         <p>ReMemory's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
@@ -267,6 +270,7 @@
         <ul>
             <li><span class="highlight">Delete all data</span> in Settings removes every question, photo and review record from the device.</li>
             <li>Uninstalling the app removes all of its local data. Files you exported or shared stay where you put them.</li>
+            <li>A question or deck you shared with a link is deleted from our server 30 days after you shared it.</li>
             <li>If you turned on Drive backup, the backup stays in your Google Drive until you delete it there.</li>
             <li>Crash reports and analytics are kept by Google for the retention periods set in Firebase, after which they are deleted.</li>
             <li>Install and app-open events are kept by Meta for the period set out in its data policy.</li>
@@ -285,7 +289,7 @@
         <p>ReMemory is a study app for exam students and is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you are under the age of majority where you live, use the app with the involvement of a parent or guardian. If you believe a child has provided personal data, contact us and we will help remove it.</p>
 
         <h2>13. International Data Transfers</h2>
-        <p>Crash reports, analytics, performance measurements, AI requests and install and app-open events, and Drive backups if you turn them on, may be processed or stored on servers outside your country of residence, operated by Google, Meta and RevenueCat. These transfers are carried out under those providers' safeguards and applicable data protection law.</p>
+        <p>Crash reports, analytics, performance measurements, AI requests and install and app-open events, Drive backups if you turn them on, and questions or decks you share with a link, may be processed or stored on servers outside your country of residence, operated by Google, Meta, RevenueCat and Cloudflare. These transfers are carried out under those providers' safeguards and applicable data protection law.</p>
 
         <h2>14. Your Rights</h2>
         <p>Depending on where you live, including under the GDPR and Turkey's KVKK, you may have the right to:</p>
